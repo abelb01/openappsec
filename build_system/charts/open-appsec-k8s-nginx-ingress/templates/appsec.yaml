@@ -127,6 +127,7 @@ spec:
           - --proxy
           - {{ .Values.appsec.proxy }}
         {{- end }}
+          imagePullPolicy: {{ .Values.appsec.image.pullPolicy }}
           env:
             - name: user_email
               value: {{ .Values.appsec.userEmail }}
