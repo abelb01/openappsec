@@ -109,7 +109,6 @@ spec:
           {{- end }}
           command:
           - {{ .Values.appsec.command }}
-          imagePullPolicy: {{ .Values.appsec.image.pullPolicy }}
           args:
         {{- if (eq "standalone" .Values.appsec.mode) }}
           - --hybrid-mode
